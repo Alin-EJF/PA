@@ -38,8 +38,8 @@ public class Main {
 
 
 
-        //net.printList();
-       // net.printCosts();
+        net.printList();
+        net.printCosts();
 
         Computer computerC= new Computer("Computer C");
         computerC.setStorageCapacity(100);
