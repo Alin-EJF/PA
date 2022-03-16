@@ -8,7 +8,6 @@ public class Network {
     public Network() {
     }
 
-    ;
 
     public void addNode(Node node) {
         nodes.add(node);
