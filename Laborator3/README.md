@@ -1,9 +1,10 @@
 #
-Homework: Am realizat functii de setCost, getCost, printCost in clasa node. <br />
-      In clasa network ma folosesc de printList si printCosts pentru a afisa nodurile si costurile acestora. <br />
+Homework:
+         &emsp; - Am realizat functii de setCost, getCost, printCost in clasa node. <br />
+     &emsp; - In clasa network ma folosesc de printList si printCosts pentru a afisa nodurile si costurile acestora. <br />
       
-    In clasa Storage am adaugat o metoda pentru afisarea unitatilor in Mb,Kb, Bytes.   <br />
+    &emsp; - In clasa Storage am adaugat o metoda pentru afisarea unitatilor in Mb,Kb, Bytes.   <br />
     
-   Am creeat o functie * displayIdentifiables() * in clasa network pentru a culege nodurile care sunt instanta Identifiable si dupa le am sortat.
+  &emsp; - Am creeat o functie  displayIdentifiables()  in clasa network pentru a culege nodurile care sunt instanta Identifiable si dupa le am sortat. <br />
    
-   In final, tot in clasa network, am implementat algoritmul lui Dijkstra, care afiseaza costurile.
+  &emsp; - In final, tot in clasa network, am implementat algoritmul lui Dijkstra, care afiseaza costurile. <br />
