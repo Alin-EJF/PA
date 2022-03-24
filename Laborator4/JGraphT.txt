@@ -1,0 +1,71 @@
+Graph<String, DefaultWeightedEdge> graph;
+
+ graph = GraphTypeBuilder
+                .undirected()
+                .weighted(true)
+                .allowingMultipleEdges(false)
+                .allowingSelfLoops(false)
+                .vertexSupplier(SupplierUtil.createStringSupplier())
+                .edgeSupplier(SupplierUtil.createDefaultWeightedEdgeSupplier())
+                .buildGraph();
+
+        //adaugarea nodurilor ( intersectii )
+        for( Intersection i : city.intersections)
+            city.graph.addVertex(i.getName());
+
+          DefaultWeightedEdge v0 = graph.addEdge(city.getIntersection(0),city.getIntersection(1));
+        DefaultWeightedEdge v1= graph.addEdge(city.getIntersection(0), city.getIntersection(3));
+        DefaultWeightedEdge v2 = graph.addEdge(city.getIntersection(0),city.getIntersection(2));
+        DefaultWeightedEdge v3 = graph.addEdge(city.getIntersection(3), city.getIntersection(2));
+        DefaultWeightedEdge v4 = graph.addEdge(city.getIntersection(3), city.getIntersection(4));
+        DefaultWeightedEdge v5 = graph.addEdge(city.getIntersection(2), city.getIntersection(4));
+        DefaultWeightedEdge v6 = graph.addEdge(city.getIntersection(1),city.getIntersection(2));
+        DefaultWeightedEdge v7 = graph.addEdge(city.getIntersection(2),city.getIntersection(5));
+        DefaultWeightedEdge v8 = graph.addEdge(city.getIntersection(1), city.getIntersection(6));
+        DefaultWeightedEdge v9 = graph.addEdge(city.getIntersection(4),city.getIntersection(6));
+        DefaultWeightedEdge v10 = graph.addEdge(city.getIntersection(4), city.getIntersection(8));
+        DefaultWeightedEdge v11= graph.addEdge(city.getIntersection(5),city.getIntersection(8));
+        DefaultWeightedEdge v12= graph.addEdge(city.getIntersection(6), city.getIntersection(8));
+        DefaultWeightedEdge v13= graph.addEdge(city.getIntersection(5), city.getIntersection(7));
+        DefaultWeightedEdge v14= graph.addEdge(city.getIntersection(7), city.getIntersection(8));
+        DefaultWeightedEdge v15= graph.addEdge(city.getIntersection(6), city.getIntersection(7));
+
+
+        //adaugarea costurilor pentru muchii
+        graph.setEdgeWeight(v0, s0.getLength());
+        graph.setEdgeWeight(v1, s1.getLength());
+        graph.setEdgeWeight(v2, s2.getLength());
+        graph.setEdgeWeight(v3, s3.getLength());
+        graph.setEdgeWeight(v4, s4.getLength());
+        graph.setEdgeWeight(v5, s5.getLength());
+        graph.setEdgeWeight(v6, s6.getLength());
+        graph.setEdgeWeight(v7, s7.getLength());
+        graph.setEdgeWeight(v8, s8.getLength());
+        graph.setEdgeWeight(v9, s9.getLength());
+        graph.setEdgeWeight(v10, s10.getLength());
+        graph.setEdgeWeight(v11, s11.getLength());
+        graph.setEdgeWeight(v12, s12.getLength());
+        graph.setEdgeWeight(v13, s13.getLength());
+        graph.setEdgeWeight(v14, s14.getLength());
+        graph.setEdgeWeight(v15, s15.getLength());
+
+
+         //implementation with prim algorithm
+        System.out.println("The streets to install data cables such that the cost is minimum:");
+        for(DefaultWeightedEdge e: new PrimMinimumSpanningTree<>(graph).getSpanningTree()) {
+            System.out.println(e.toString());
+
+
+
+//functia getIntersection din city
+
+   //returneaza numele intersectiei cautate
+    public String getIntersection(int i) {
+        int index = 0;
+        for (Intersection element : intersections) {
+            if (index == i)
+                return element.getName();
+            index++;
+        }
+        return "unknown";
+    }
