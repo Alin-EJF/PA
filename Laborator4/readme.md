@@ -4,8 +4,8 @@ Am o versiune a temei (in fisierul JGraphT.txt) unde m-am folosit de libraria  J
 
 Clasa City pe care am creat-o nu contine decat o lista de strazi si doua functii *Greedy()* , *bestIntersection()* care ma ajuta la algoritmul de la sfarsit. Algoritmul nu functioneaza, da' niste erori, insa ideea din spate o consider buna. Algoritmul ia strazile cu lungimile mai mici si alege intersectiile care au potential mai mare. Cu un pic mai mult timp as fi putut plia algoritmul pentru partea de bonus, alegand random o intersectie si o strada si pastrand arborele care are costul cel mai mic. <br />
 
-Clasa Intersection are de asemenea o lista de strazi si un camp visited pentru a ma ajuta la algoritmul de la final. <br />
+Clasa Intersection are de asemenea o lista de strazi si un camp *visited* pentru a ma ajuta la algoritmul de la final. <br />
 
-Clasa Street are o lista de intersectii (capete),o functie *joinsThree()* care verifica daca nodul in care am ajuns are 3 (+1 strada care ajunge in nod) strazi care ies din el. De asemenea am generat un compareTo pentru a compara length-urile. <br />
+Clasa Street are o lista de intersectii (capetele), o functie *joinsThree()* care verifica daca nodul in care am ajuns are 3 (+1 strada care ajunge in nod) strazi care ies din el. De asemenea am generat un compareTo pentru a compara length-urile. <br />
 
 In clasa Main declar strazile si intersectiile unde ma folosesc de clasa faker (din depencies) pentru a randomiza numele strazilor. <br />
