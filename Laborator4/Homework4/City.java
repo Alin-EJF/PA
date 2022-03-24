@@ -14,10 +14,13 @@ public class City {
         }
     }
 
-    public Intersection bestIntersection(Intersection intersection1, Intersection intersection2) {     //decide intersectia care are strazi cu lungime mai mica
-        if (Collections.min(intersection1.getStreets()).getLength() < Collections.min(intersection2.getStreets()).getLength())
+ public Intersection bestIntersection(Intersection intersection1, Intersection intersection2) {     //decide intersectia care are strazi cu lungime mai mica
+        if (Collections.min(intersection1.getStreets()).getLength() < Collections.min(intersection2.getStreets()).getLength() && !intersection1.isVisited())
             return intersection1;
-        return intersection2;
+        else if (!intersection2.isVisited())
+            return intersection2;
+
+        return null;
     }
 
 }
