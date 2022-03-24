@@ -60,7 +60,7 @@ public class Main {
 
 
 
-        //city.Greedy(s1,nodes[1]);   // Algoritmul Greedy din clasa City
+        //city.greedy(s1,nodes[1]);   // Algoritmul Greedy din clasa City
 
 
     }
