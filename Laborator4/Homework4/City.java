@@ -5,7 +5,7 @@ public class City {
     List<Street> edges = new LinkedList<>();
 
 
-    public void Greedy(Street streets, Intersection intersection) {        //calculeaza un MST alegand o strada si o intersectie de inceput
+    public void greedy(Street streets, Intersection intersection) {        //calculeaza un MST alegand o strada si o intersectie de inceput
         while (intersection.getStreets() != null) {  // && !visited
 
             intersection.setVisited(true);  //am vizitat nodul
