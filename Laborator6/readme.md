@@ -1,4 +1,4 @@
-Homework:   -Am reusit sa desenez sticksurile in mod aleatoriu, cercurile jucatorilor, am reusit sa fac game logic-ul si sa salvez/incarc jocul prin functia save/load. Din pacate am un bug cand se termina jocul, nu apare pe ecran winner-ul, insa jocul se opreste, adica recunoaste ca cine a castigat.
+Homework:   -Am reusit sa desenez sticksurile in mod aleatoriu, cercurile jucatorilor, am reusit sa fac game logic-ul si sa salvez/incarc jocul prin functia save/load. Din pacate am un bug cand se termina jocul, nu apare pe ecran winner-ul, insa jocul se opreste, adica recunoaste ca cineva a castigat.
 
     -In drawing panel desenez sticks-urile aleatoriu cu functia paintSticks(), m-am inspirat din desenarea liniilor gri (asa ca pe slideuri).
     
