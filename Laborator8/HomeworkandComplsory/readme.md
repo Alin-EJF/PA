@@ -1,0 +1,1 @@
+#Prezentat fizic la laborator
